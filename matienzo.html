@@ -5,206 +5,169 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MATIENZO — Tienda</title>
   <meta name="description" content="MATIENZO — Tradición en movimiento. Tienda online de mates tradicionales y modernos." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --verde-oscuro:#2F3E2F;
-      --arena:#D9C7A3;
-      --negro:#1C1C1C;
-      --cobre:#B47E42;
-      --bg:var(--arena);
-      --max-width:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Raleway, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--negro)}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max-width);margin:0 auto;padding:30px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{height:56px;width:auto}
-    .brand h1{font-family:Montserrat, sans-serif;font-weight:800;margin:0;color:var(--verde-oscuro);letter-spacing:1px}
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{font-weight:600;color:var(--negro);opacity:0.85}
-    .cta{background:var(--verde-oscuro);color:white;padding:8px 14px;border-radius:10px;font-weight:700}
-    .layout{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:18px}
-    @media(max-width:980px){.layout{grid-template-columns:1fr;}.sidebar{order:-1}}
-    .store-hero{background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));padding:20px;border-radius:12px;display:flex;gap:18px;align-items:center}
-    .store-hero img{width:110px;height:110px;object-fit:cover;border-radius:12px;border:6px solid rgba(47,62,47,0.06)}
-    .store-hero h2{margin:0;font-family:Montserrat;font-size:20px;color:var(--verde-oscuro)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
-    .card{background:white;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:10px}
-    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
-    .card h4{margin:0;font-family:Montserrat;font-size:16px;color:var(--negro)}
-    .price{font-weight:800;color:var(--verde-oscuro)}
-    .tag{background:var(--cobre);color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;display:inline-block}
-    .actions{display:flex;gap:8px;align-items:center}
-    .btn{background:var(--verde-oscuro);color:white;padding:8px 10px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-    .btn-secondary{background:transparent;padding:8px 10px;border-radius:10px;border:2px solid var(--verde-oscuro);cursor:pointer;font-weight:700}
-    /* Sidebar / cart */
-    .sidebar{position:sticky;top:28px;background:linear-gradient(180deg,white,rgba(255,255,255,0.98));padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .cart-list{display:flex;flex-direction:column;gap:12px;max-height:420px;overflow:auto;padding-right:6px}
-    .cart-item{display:flex;gap:10px;align-items:center;border-bottom:1px dashed rgba(0,0,0,0.06);padding-bottom:10px}
-    .cart-item img{width:56px;height:56px;object-fit:cover;border-radius:6px}
-    .qty{display:flex;align-items:center;gap:8px}
-    .qty button{width:28px;height:28px;border-radius:6px;border:1px solid rgba(0,0,0,0.08);background:white;cursor:pointer}
-    .total{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-top:12px;font-size:18px}
-    .small{font-size:13px;color:#666}
-    footer{margin-top:30px;padding-top:18px;border-top:1px solid rgba(0,0,0,0.04);display:flex;justify-content:space-between;align-items:center}
-    /* helper */
-    .muted{color:#666;font-size:14px}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div style="width:56px;height:56px;border-radius:10px;background:var(--verde-oscuro);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-family:Montserrat">M</div>
-        <div>
-          <h1>MATIENZO</h1>
-          <div class="small">tradición en movimiento</div>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <div>
+            <h1 class="brand-title">MATIENZO</h1>
+            <div class="brand-sub">tradición en movimiento</div>
+          </div>
         </div>
+        <nav class="nav">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#packs">Packs</a>
+          <a href="#contacto">Contacto</a>
+          <a class="btn primary" href="#cart">Carrito</a>
+        </nav>
       </div>
-      <nav>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#packs">Packs</a>
-        <a href="#contacto">Contacto</a>
-        <a class="cta" href="#cart">Carrito</a>
-      </nav>
     </header>
 
-    <main class="layout">
-      <div>
-        <div class="store-hero">
-          <img src="assets/hero_mate.jpg" alt="Mate Matienzo">
-          <div>
-            <h2>MATIENZO — Mates con identidad</h2>
-            <p class="muted" style="margin:6px 0 0">Tradición y diseño moderno para llevar a todas partes. Envíos a todo el país. Personalizaciones por encargo.</p>
+    <main class="container">
+      <section class="hero store-hero">
+        <img src="assets/hero_mate.jpg" alt="Mate Matienzo" class="hero-img">
+        <div class="hero-copy">
+          <h2>MATIENZO — Mates con identidad</h2>
+          <p class="muted">Tradición y diseño moderno para llevar a todas partes. Envíos a todo el país. Personalizaciones por encargo.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn outline" href="#packs">Ver packs</a>
           </div>
         </div>
+      </section>
 
-        <section id="catalogo">
-          <h3 style="margin-top:18px;font-family:Montserrat;color:var(--verde-oscuro)">Catálogo</h3>
-          <p class="muted">Seleccioná los productos y agrégalos al carrito.</p>
+      <div class="layout">
+        <div class="main-col">
+          <section id="catalogo" class="section">
+            <h3>Catálogo</h3>
+            <p class="muted">Seleccioná los productos y agrégalos al carrito.</p>
+            <div class="grid" id="productsGrid"></div>
+          </section>
 
-          <div class="grid" id="productsGrid">
-            <!-- Product cards inserted by JS -->
-          </div>
-        </section>
+          <section id="packs" class="section">
+            <h3>Packs destacados</h3>
+            <div class="grid packs-grid">
+              <article class="card">
+                <h4>Pack Regalo — Básico</h4>
+                <p class="small">Mate + Bombilla + Funda de lienzo. Caja kraft lista para regalar.</p>
+                <div class="card-row">
+                  <div class="price">$28.000</div>
+                  <button class="btn" onclick="addToCart('Pack Regalo — Básico', 28000)">Agregar</button>
+                </div>
+              </article>
 
-        <section id="packs" style="margin-top:22px">
-          <h3 style="font-family:Montserrat;color:var(--verde-oscuro)">Packs destacados</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px">
-            <div class="card">
-              <h4>Pack Regalo — Básico</h4>
-              <p class="small">Mate + Bombilla + Funda de lienzo. Caja kraft lista para regalar.</p>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-                <div class="price">$28.000</div>
-                <div class="actions"><button class="btn" onclick="addToCart('Pack Regalo — Básico', 28000)">Agregar</button></div>
-              </div>
+              <article class="card">
+                <h4>Pack Premium — Edición limitada</h4>
+                <p class="small">Mate forrado premium + Bombilla + Caja numerada.</p>
+                <div class="card-row">
+                  <div class="price">$38.500</div>
+                  <button class="btn" onclick="addToCart('Pack Premium — Edición limitada', 38500)">Agregar</button>
+                </div>
+              </article>
             </div>
-            <div class="card">
-              <h4>Pack Premium — Edición limitada</h4>
-              <p class="small">Mate forrado premium + Bombilla + Caja numerada.</p>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-                <div class="price">$38.500</div>
-                <div class="actions"><button class="btn" onclick="addToCart('Pack Premium — Edición limitada', 38500)">Agregar</button></div>
+          </section>
+
+          <section id="contacto" class="section contact-section">
+            <h3>Contacto</h3>
+            <p class="muted">Escribinos por WhatsApp desde este formulario o directamente a nuestro Instagram.</p>
+            <form id="contactForm" onsubmit="submitContact(event)">
+              <div class="form-grid">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono / WhatsApp" required>
+                <input type="email" name="email" id="email" placeholder="Email (opcional)">
+                <input type="text" name="asunto" id="asunto" placeholder="Asunto / Producto (opcional)">
+                <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
               </div>
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Enviar por WhatsApp</button>
+                <button type="button" class="btn outline" onclick="clearContact()">Limpiar</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <aside class="sidebar" id="cart">
+          <div class="cart-box">
+            <h4>Tu carrito</h4>
+            <div id="cartList" class="cart-list">
+              <div class="muted">No hay productos en el carrito.</div>
             </div>
+            <div id="cartTotalRow" class="cart-total" style="display:none">
+              <div>Total</div>
+              <div id="cartTotal" class="price">$0</div>
+            </div>
+
+            <div class="cart-actions">
+              <button class="btn primary" onclick="checkout()">Enviar pedido por WhatsApp</button>
+              <button class="btn outline" onclick="emptyCart()">Vaciar carrito</button>
+            </div>
+
+            <div class="muted small">Al enviar, se abrirá WhatsApp para completar el pedido. Número a configurar en el código.</div>
           </div>
-        </section>
+        </aside>
       </div>
-
-      <aside class="sidebar" id="cart">
-        <h4 style="margin:0 0 8px;font-family:Montserrat;color:var(--verde-oscuro)">Tu carrito</h4>
-        <div class="cart-list" id="cartList">
-          <div class="muted">No hay productos en el carrito.</div>
-        </div>
-
-        <div class="total" id="cartTotalRow" style="display:none">
-          <div>Total</div>
-          <div id="cartTotal">$0</div>
-        </div>
-
-        <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
-          <button class="btn" id="checkoutBtn" onclick="checkout()">Enviar pedido por WhatsApp</button>
-          <button class="btn-secondary" onclick="emptyCart()">Vaciar carrito</button>
-        </div>
-
-        <div style="margin-top:12px" class="small muted">Al hacer clic en Enviar, podés revisar y completar tu número de WhatsApp si no está configurado.</div>
-      </aside>
     </main>
 
-    <footer>
-      <div>
-        <strong>MATIENZO</strong> — tradición en movimiento<br>
-        <small class="muted">© MATIENZO</small>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>MATIENZO</strong> — tradición en movimiento<br>
+          <small>Diseño © MATIENZO — Tradición en movimiento</small>
+        </div>
+        <div class="footer-actions">
+          <a href="https://www.instagram.com/matienzo.mates" target="_blank" class="icon-link" aria-label="Instagram">
+            <!-- Instagram SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#2F3E2F" stroke-width="1.4" fill="none"/><circle cx="12" cy="12" r="3" stroke="#2F3E2F" stroke-width="1.4" fill="none"/><circle cx="17.6" cy="6.4" r="0.6" fill="#2F3E2F"/></svg>
+          </a>
+          <a href="#" id="waFooter" class="icon-link" aria-label="WhatsApp">
+            <!-- WhatsApp SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5H3.5v17l3-1 1 1 11-3v-14z" stroke="#2F3E2F" stroke-width="1.2" fill="none"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="muted">Hecho con ❤️ • Redes: @matienzo.oficial</div>
     </footer>
+
   </div>
 
 <script>
-/*
-  Tienda MATIENZO - Carrito básico en una sola página
-  - Opción B: carrito real, luego envía pedido por WhatsApp
-  - WhatsApp number left empty for owner to complete (international format)
-*/
+/* Configuración */
+const whatsappNumber = ""; // <-- deja vacío o coloca tu número en formato internacional sin signos: 5493411234567
+const instagramUrl = "https://www.instagram.com/matienzo.mates";
 
-const whatsappNumber = ""; // <-- DEJADO VACÍO. Reemplazá por tu número en formato internacional, ej: "5493411234567"
-
+/* Productos de ejemplo */
 const products = [
-  {
-    id: 'mate-calabaza',
-    title: 'Mate Calabaza Forrado',
-    price: 12900,
-    tag: 'Tradicional',
-    img: 'assets/mate_calabaza.jpg'
-  },
-  {
-    id: 'mate-acero',
-    title: 'Mate Térmico Acero',
-    price: 18500,
-    tag: 'Moderno',
-    img: 'assets/mate_acero.jpg'
-  },
-  {
-    id: 'set-compacto',
-    title: 'Set Compacto — Mate + Bombilla',
-    price: 24900,
-    tag: 'Pack',
-    img: 'assets/set_compacto.jpg'
-  },
-  {
-    id: 'mate-personalizado',
-    title: 'Mate Personalizado (encargo)',
-    price: 29000,
-    tag: 'Premium',
-    img: 'assets/mate_personalizado.jpg'
-  }
+  { id: 'mate-calabaza', title: 'Mate Calabaza Forrado', price: 12900, tag: 'Tradicional', img: 'assets/mate_calabaza.jpg' },
+  { id: 'mate-acero', title: 'Mate Térmico Acero', price: 18500, tag: 'Moderno', img: 'assets/mate_acero.jpg' },
+  { id: 'set-compacto', title: 'Set Compacto — Mate + Bombilla', price: 24900, tag: 'Pack', img: 'assets/set_compacto.jpg' },
+  { id: 'mate-personalizado', title: 'Mate Personalizado (encargo)', price: 29000, tag: 'Premium', img: 'assets/mate_personalizado.jpg' }
 ];
 
-let cart = {}; // { productId: {product, qty} }
+let cart = {};
 
-function formatPrice(n){
-  return '$' + n.toLocaleString('es-AR');
-}
+function formatPrice(n){ return '$' + n.toLocaleString('es-AR'); }
 
 function renderProducts(){
   const grid = document.getElementById('productsGrid');
-  grid.innerHTML = '';
   products.forEach(p => {
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = `
       <img src="${p.img}" alt="${p.title}" onerror="this.style.opacity=0.45"/>
-      <h4>${p.title}</h4>
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div style="display:flex;flex-direction:column">
-          <div class="price">${formatPrice(p.price)}</div>
-          <div class="small" style="margin-top:6px">${p.tag}</div>
-        </div>
-        <div class="actions">
-          <button class="btn-secondary" onclick="addToCart('${p.id}', ${p.price})">Agregar</button>
+      <div class="card-body">
+        <h4>${p.title}</h4>
+        <div class="card-row">
+          <div>
+            <div class="price">${formatPrice(p.price)}</div>
+            <div class="small muted">${p.tag}</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn outline" onclick="addToCart('${p.id}', ${p.price})">Agregar</button>
+          </div>
         </div>
       </div>
     `;
@@ -213,18 +176,13 @@ function renderProducts(){
 }
 
 function addToCart(productId, price){
-  const product = products.find(p => p.id === productId) || products.find(p => p.price === price && p.id === productId);
-  // productId may be id or title if called from packs; handle both
-  let prod = product;
-  if(!prod){
-    prod = products.find(p => p.id === productId) || products.find(p => p.title === productId);
+  const prod = products.find(p => p.id === productId) || products.find(p => p.title === productId);
+  let product = prod;
+  if(!product){
+    product = { id: productId, title: productId, price: price || 0, img: 'assets/placeholder.jpg' };
   }
-  if(!prod){
-    // pack items passed as title string; construct simple object
-    prod = { id: productId, title: productId, price: price || 0, img: 'assets/placeholder.jpg' };
-  }
-  if(cart[prod.id]) cart[prod.id].qty += 1;
-  else cart[prod.id] = { product: prod, qty: 1 };
+  if(cart[product.id]) cart[product.id].qty += 1;
+  else cart[product.id] = { product, qty: 1 };
   renderCart();
 }
 
@@ -239,25 +197,25 @@ function renderCart(){
   }
   let total = 0;
   keys.forEach(k => {
-    const entry = cart[k];
-    const p = entry.product;
-    const subtotal = entry.qty * p.price;
+    const e = cart[k];
+    const p = e.product;
+    const subtotal = e.qty * p.price;
     total += subtotal;
     const item = document.createElement('div');
     item.className = 'cart-item';
     item.innerHTML = `
       <img src="${p.img}" alt="${p.title}" onerror="this.style.opacity=0.45"/>
-      <div style="flex:1">
-        <div style="font-weight:700">${p.title}</div>
-        <div class="small">${formatPrice(p.price)} x ${entry.qty} = ${formatPrice(subtotal)}</div>
+      <div class="cart-info">
+        <div class="cart-title">${p.title}</div>
+        <div class="small muted">${formatPrice(p.price)} x ${e.qty} = ${formatPrice(subtotal)}</div>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+      <div class="cart-controls">
         <div class="qty">
           <button onclick="changeQty('${p.id}', -1)">-</button>
-          <div style="min-width:20px;text-align:center">${entry.qty}</div>
+          <div class="qty-num">${e.qty}</div>
           <button onclick="changeQty('${p.id}', 1)">+</button>
         </div>
-        <button style="background:transparent;border:0;color:#b23;cursor:pointer;font-size:13px" onclick="removeItem('${p.id}')">Eliminar</button>
+        <button class="remove" onclick="removeItem('${p.id}')">Eliminar</button>
       </div>
     `;
     list.appendChild(item);
@@ -266,30 +224,22 @@ function renderCart(){
   document.getElementById('cartTotalRow').style.display = 'flex';
 }
 
+/* cart controls */
 function changeQty(id, delta){
   if(!cart[id]) return;
   cart[id].qty += delta;
   if(cart[id].qty <= 0) delete cart[id];
   renderCart();
 }
+function removeItem(id){ delete cart[id]; renderCart(); }
+function emptyCart(){ if(confirm('Vaciar el carrito?')){ cart = {}; renderCart(); } }
 
-function removeItem(id){
-  delete cart[id];
-  renderCart();
-}
-
-function emptyCart(){
-  if(confirm('Vaciar el carrito?')){ cart = {}; renderCart(); }
-}
-
+/* Checkout -> WhatsApp */
 function checkout(){
   const keys = Object.keys(cart);
-  if(keys.length === 0){ alert('El carrito está vacío. Agregá productos para continuar.'); return; }
-  // Build order message
-  let lines = [];
+  if(keys.length === 0){ alert('El carrito está vacío.'); return; }
+  let lines = ['Pedido desde MATIENZO','----------------------'];
   let total = 0;
-  lines.push('Pedido desde MATIENZO');
-  lines.push('----------------------');
   keys.forEach(k => {
     const e = cart[k];
     lines.push(`${e.qty} x ${e.product.title} — ${formatPrice(e.product.price)} c/u`);
@@ -304,23 +254,68 @@ function checkout(){
   lines.push('Dirección / Comentarios:');
   const message = encodeURIComponent(lines.join('\n'));
   if(whatsappNumber && whatsappNumber.trim() !== ''){
-    const url = `https://wa.me/${whatsappNumber}?text=${message}`;
-    window.open(url, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   } else {
-    // Prompt for number (owner can configure), or let user fill in WhatsApp number
-    const userNumber = prompt('Ingresá el número de WhatsApp al que enviar el pedido (formato internacional, ej: 5493411234567):');
+    const userNumber = prompt('Ingresá el número de WhatsApp al que enviar el pedido (ej: 5493411234567):');
     if(userNumber && userNumber.trim() !== ''){
-      const url = `https://wa.me/${userNumber.replace(/[\s+\-()]/g,'')}?text=${message}`;
-      window.open(url, '_blank');
+      window.open(`https://wa.me/${userNumber.replace(/[\s+\-()]/g,'')}?text=${message}`, '_blank');
     } else {
-      alert('No se envió el pedido. Podés configurar tu número en el código para que el botón funcione automáticamente.');
+      alert('No se envió el pedido. Configurá tu número en el código para que el botón funcione automáticamente.');
     }
   }
 }
 
-// Init
-renderProducts();
-renderCart();
+/* Contact form: envie a WhatsApp */
+function submitContact(e){
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const asunto = document.getElementById('asunto').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+  let lines = ['Contacto desde MATIENZO','----------------------'];
+  lines.push(`Nombre: ${nombre}`);
+  lines.push(`Teléfono: ${telefono}`);
+  if(email) lines.push(`Email: ${email}`);
+  if(asunto) lines.push(`Asunto: ${asunto}`);
+  lines.push('');
+  lines.push('Mensaje:');
+  lines.push(mensaje);
+  const text = encodeURIComponent(lines.join('\n'));
+  if(whatsappNumber && whatsappNumber.trim() !== ''){
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+  } else {
+    // open with the user's phone to send to owner: ask for owner number or let user enter their own
+    const owner = prompt('Ingresá el número de WhatsApp para recibir este contacto (ej: 5493411234567):');
+    if(owner && owner.trim() !== ''){
+      window.open(`https://wa.me/${owner.replace(/[\s+\-()]/g,'')}?text=${text}`, '_blank');
+    } else {
+      alert('No se envió el mensaje. Podés configurar el número del negocio en el código.');
+    }
+  }
+}
+
+function clearContact(){
+  document.getElementById('contactForm').reset();
+}
+
+/* Init */
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+  renderCart();
+  // footer whatsapp quick link
+  document.getElementById('waFooter').addEventListener('click', (ev) => {
+    ev.preventDefault();
+    const msg = encodeURIComponent('Hola! Quiero hacer una consulta desde la web de MATIENZO.');
+    if(whatsappNumber && whatsappNumber.trim() !== ''){
+      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
+    } else {
+      const owner = prompt('Ingresá el número de WhatsApp para recibir mensajes (ej: 5493411234567):');
+      if(owner && owner.trim() !== '') window.open(`https://wa.me/${owner.replace(/[\s+\-()]/g,'')}?text=${msg}`, '_blank');
+    }
+  });
+});
 </script>
 </body>
 </html>
+
