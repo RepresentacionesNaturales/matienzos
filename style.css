@@ -90,3 +90,36 @@ body{margin:0;font-family:Raleway, system-ui, -apple-system, "Segoe UI", Roboto,
   .grid{gap:12px}
   .container{padding:14px}
 }
+/* ==========================================================
+   Ajustes de logo — MATIENZO
+   ========================================================== */
+
+/* Logo principal del hero */
+.logomatienzo {
+  width: 110px;       /* 🔹 Tamaño ideal en escritorio */
+  height: auto;       /* Mantiene proporción original */
+  display: block;
+  border-radius: 8px; /* opcional: bordes suaves */
+}
+
+/* Alineación visual del bloque hero */
+.store-hero {
+  align-items: center; /* Centra el logo y el texto verticalmente */
+}
+
+/* Ajuste de tamaño de texto principal para armonía */
+.hero-copy h2 {
+  font-size: 28px;    /* 🔹 Tamaño balanceado respecto al logo */
+  line-height: 1.2;
+}
+
+/* Versión móvil (pantallas pequeñas) */
+@media (max-width: 600px) {
+  .logomatienzo {
+    width: 85px;      /* 🔹 Más chico para celulares */
+  }
+
+  .hero-copy h2 {
+    font-size: 24px;  /* Un poco más compacto en móvil */
+  }
+}
