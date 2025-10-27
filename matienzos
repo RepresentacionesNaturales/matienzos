@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MATIENZO — Mates y algo más</title>
+  <meta name="description" content="MATIENZO — Tradición en movimiento. Mates tradicionales y modernos. Shop online, packs y personalización." />
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --verde-oscuro:#2F3E2F;
+      --arena:#D9C7A3;
+      --negro:#1C1C1C;
+      --cobre:#B47E42;
+      --bg:#FBF7F0;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Raleway, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--negro)}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand img{height:68px;width:auto}
+    .brand h1{font-family:Montserrat, sans-serif;font-weight:800;margin:0;color:var(--verde-oscuro);letter-spacing:1px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:var(--negro);opacity:0.85}
+    .cta{background:var(--verde-oscuro);color:white;padding:10px 16px;border-radius:10px;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:36px;align-items:center;padding:40px 0}
+    .hero-left h2{font-family:Montserrat, sans-serif;font-size:44px;margin:0;color:var(--verde-oscuro)}
+    .hero-left p{margin:14px 0 22px;color:#3b3b3b;line-height:1.5}
+    .hero-actions{display:flex;gap:12px}
+    .btn-outline{border:2px solid var(--verde-oscuro);padding:10px 16px;border-radius:10px;font-weight:700}
+
+    .hero-right{display:flex;justify-content:center}
+    .logo-mock{background:var(--arena);padding:22px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center}
+    .logo-mock img{max-width:320px;height:auto;display:block}
+
+    /* Secciones */
+    section{padding:40px 0;border-top:1px solid rgba(0,0,0,0.03)}
+    h3{font-family:Montserrat, sans-serif;color:var(--verde-oscuro);margin:0 0 18px;font-size:22px}
+    .lead{color:#444;margin-bottom:18px}
+
+    /* Productos */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:white;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;gap:12px}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+    .card h4{margin:0;font-family:Montserrat;font-size:16px;color:var(--negro)}
+    .price{font-weight:700;color:var(--verde-oscuro)}
+    .badge{background:var(--cobre);color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;display:inline-block}
+
+    /* Features */
+    .features{display:flex;gap:18px;flex-wrap:wrap}
+    .feature{flex:1 1 220px;background:linear-gradient(180deg,white,rgba(255,255,255,0.92));padding:18px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.03)}
+
+    /* Footer */
+    footer{padding:28px 0;color:#444}
+    .socials{display:flex;gap:14px}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:-1}
+      .brand img{height:56px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Reemplazá "assets/matienzo-logo.png" por tu archivo real -->
+        <img src="assets/matienzo-logo.png" alt="MATIENZO logo" />
+        <div>
+          <h1>MATIENZO</h1>
+          <div style="font-size:12px;color:#666;margin-top:4px">tradición en movimiento</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#packs">Packs</a>
+        <a href="#contacto">Contacto</a>
+        <a class="cta" href="#tienda">Comprar</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero">
+      <div class="hero-left">
+        <h2>MATIENZO — Mates con identidad</h2>
+        <p class="lead">Fusionamos la tradición del mate con diseño contemporáneo. Mates clásicos, térmicos y sets pensados para andar por la ciudad o el campo. Calidad, estética y raíces en cada cebada.</p>
+
+        <div class="hero-actions">
+          <a class="cta" href="#productos">Ver productos</a>
+          <a class="btn-outline" href="#packs">Ver packs</a>
+        </div>
+
+        <div style="margin-top:22px;color:#666;font-size:14px">Envíos a todo el país • Personalización por pedidos</div>
+      </div>
+
+      <div class="hero-right">
+        <div class="logo-mock">
+          <!-- También podés reemplazar esto por una foto estilizada de tus productos -->
+          <img src="assets/matienzo-logo.png" alt="Logo MATIENZO" />
+        </div>
+      </div>
+    </main>
+
+    <!-- ACERCA -->
+    <section id="nosotros">
+      <h3>¿Quiénes somos?</h3>
+      <p class="lead">MATIENZO nace de la pasión por el mate y por el diseño. Creemos que el ritual del mate se adapta a cada camino: por eso combinamos piezas tradicionales con soluciones modernas, materiales duraderos y packaging pensado para regalar.</p>
+
+      <div class="features" style="margin-top:12px">
+        <div class="feature">
+          <h4>Tradición</h4>
+          <p>Materiales y acabados que respetan el espíritu del mate: calabaza, madera, cuero y acero inoxidable.</p>
+        </div>
+        <div class="feature">
+          <h4>Diseño</h4>
+          <p>Piezas pensadas para verse bien en la ciudad y durar en el tiempo.</p>
+        </div>
+        <div class="feature">
+          <h4>Regalos y empresas</h4>
+          <p>Personalizamos sets para empresas, eventos y regalos corporativos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+      <h3>Productos destacados</h3>
+      <p class="lead">Una selección de lo que podés encontrar en MATIENZO.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="assets/mate_calabaza.jpg" alt="Mate calabaza" />
+          <div>
+            <h4>Mate Calabaza Forrado</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">$12.900</div>
+              <div class="badge">Tradicional</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/mate_acero.jpg" alt="Mate acero" />
+          <div>
+            <h4>Mate Térmico Acero</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">$18.500</div>
+              <div class="badge">Moderno</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/set_compacto.jpg" alt="Set compacto" />
+          <div>
+            <h4>Set Compacto — Mate + Bombilla</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">$24.900</div>
+              <div class="badge">Pack</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/mate_personalizado.jpg" alt="Mate personalizado" />
+          <div>
+            <h4>Mate Personalizado (encargo)</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">Desde $29.000</div>
+              <div class="badge">Premium</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PACKS -->
+    <section id="packs">
+      <h3>Packs y regalos</h3>
+      <p class="lead">Sets listos para regalar — cajas kraft, bolsita de lienzo y tarjeta personalizada.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h4>Pack Regalo — Básico</h4>
+          <p>Mate + Bombilla + Funda de lienzo.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <div class="price">$28.000</div>
+            <a class="btn-outline" href="#contacto">Pedir</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Pack Premium — Edición limitada</h4>
+          <p>Mate forrado + Bombilla + Caja kraft + Sticker</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <div class="price">$38.500</div>
+            <a class="btn-outline" href="#contacto">Pedir</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h3>Contacto</h3>
+      <p class="lead">Pedidos y consultas: escribinos por Instagram o WhatsApp. También podés completar este formulario.</p>
+
+      <form style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:780px">
+        <input type="text" name="nombre" placeholder="Nombre" style="padding:12px;border-radius:8px;border:1px solid #e6e6e6" />
+        <input type="email" name="email" placeholder="Email" style="padding:12px;border-radius:8px;border:1px solid #e6e6e6" />
+        <input type="text" name="telefono" placeholder="Teléfono / WhatsApp" style="padding:12px;border-radius:8px;border:1px solid #e6e6e6" />
+        <select name="producto" style="padding:12px;border-radius:8px;border:1px solid #e6e6e6">
+          <option>Consulta general</option>
+          <option>Mate calabaza</option>
+          <option>Mate acero</option>
+          <option>Pack regalo</option>
+          <option>Personalización</option>
+        </select>
+        <textarea name="mensaje" placeholder="Mensaje" style="grid-column:1/3;padding:12px;border-radius:8px;border:1px solid #e6e6e6"></textarea>
+        <button style="grid-column:1/3;padding:12px;background:var(--verde-oscuro);color:white;border-radius:10px;border:0;font-weight:700">Enviar consulta</button>
+      </form>
+
+      <div style="margin-top:18px;color:#666">También nos encontrás en: <a href="#">@matienzo.oficial</a> (Instagram) • <a href="#">Whatsapp</a></div>
+    </section>
+
+    <footer style="margin-top:30px;border-top:1px solid rgba(0,0,0,0.04);padding-top:24px;display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <strong>MATIENZO</strong> — tradición en movimiento<br>
+        <small style="color:#666">Derechos reservados © MATIENZO</small>
+      </div>
+
+      <div class="socials">
+        <!-- íconos SVG simples -->
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--verde-oscuro)" stroke-width="1.6" fill="none"/><circle cx="12" cy="12" r="3" stroke="var(--verde-oscuro)" stroke-width="1.6" fill="none"/><circle cx="18" cy="6" r="0.7" fill="var(--verde-oscuro)"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" title="Facebook">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 8h2v-3h-2c-1.1 0-2 .9-2 2v1h-1v3h1v7h3v-7h2.2l.8-3H16v-1c0-.3.1-1 .9-1z" fill="var(--verde-oscuro)"/></svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
